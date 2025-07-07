@@ -38,8 +38,27 @@ https://github.com/settings/tokens
  - Give it access to Contents(Read and Write) and check the box for `repo` scope , for commits .
 
 ### SSH
+```ssh
+git clone git@github.com:hey-farhan/github-examples.git
+```
 
 
+we will need to create out own key pair 
+```sh
+ssh-keygen -t rsa
+```
+
+you can test your connection with 
+```
+ssh -T git@github.com
+```
+for WSL user and if you create a non default key (create key in non-default folder )
+you can add it using : 
+
+```sh
+eval "$(ssh-agent -s)"
+ssh-add ~/Desktop/git_learning_folder/github-examples/ssh-key
+```
 
 ## Commits 
 
